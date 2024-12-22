@@ -8,13 +8,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('lib/images/1.png'), // Background image
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-          ),
-        ),
+        color: Colors.white, // Set a plain background color instead of an image
         child: Align(
           alignment: Alignment.topCenter,
           child: Padding(
@@ -34,13 +28,14 @@ class WelcomeScreen extends StatelessWidget {
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 2.0,
-                        color: Colors.white,
+                        color: Colors.black, // Changed text color to black
                       ),
                       children: <TextSpan>[
                         TextSpan(
                           text: 'SIKA ',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 250, 249, 249),
+                            color:
+                                Color.fromARGB(255, 0, 0, 0), // Changed color
                           ),
                         ),
                         TextSpan(
@@ -62,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 18,
-                      color: Colors.white70,
+                      color: Colors.black87, // Changed text color to black
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -100,19 +95,6 @@ class WelcomeScreen extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 100),
-
-                // Logos Section (Brand Images)
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset('lib/images/brand1.png', height: 50), // Brand 1
-                    const SizedBox(width: 70),
-                    Image.asset('lib/images/brand2.png', height: 50), // Brand 2
-                    const SizedBox(width: 70),
-                    Image.asset('lib/images/brand3.png', height: 50), // Brand 3
-                    const SizedBox(width: 70),
-                  ],
-                ),
               ],
             ),
           ),
